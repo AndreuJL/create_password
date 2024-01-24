@@ -8,8 +8,13 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "Major shift";
+  src: url("../font/major_shift-webfont.woff2") format("woff2"), url("../font/major_shift-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../font/lora-regular-webfont.woff2") format("woff2"), url("../font/lora-regular-webfont.woff") format("woff");
 }
 
 :root {
@@ -19,4 +24,79 @@
   --color-blanco-letra: #f5f5f5;
   --color-lila-casillas: #b42bb6;
   --color-negro-letra: #0f0f0f;
+  --color-fondo-header: #1D1E2E;
+
+  /* Tipografía */
+  --h5: 0.7rem;
+  --p: 1.25rem;
+  --h4: 1rem;
+  --h3: 1.75rem;
+  --h2: 1.875rem; /* 16px */
+  --h1: 2.5rem;
+}
+
+body{
+  font-family: "Lora";
+
+  & header{
+    background: var(--color-fondo-header);
+    width: 100%;
+    padding: 5px 0;
+
+    display: flex;
+    justify-content: center;
+
+    & .container__header{
+      width: 100%;
+      max-width: 1780px;
+      color: var(--color-blanco-letra);
+      font-family: "Major shift";
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & nav{
+        font-family: "Lora";
+
+        display: flex;
+        gap: 80px;
+
+        & a{
+          text-decoration: none;
+          color: var(--color-blanco-letra);
+        }
+      }
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+  & footer{
+    background: linear-gradient(180deg, var(--color-azul-oscuro) 0%, var(--color-azul-claro) 100%);
+    color: var(--color-blanco-letra);
+    padding-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+    & section{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & ul li{
+        font-size: var(--h5);
+        margin-bottom: .375rem;
+      }
+    }
+  }
 }
