@@ -8,12 +8,12 @@
     <script src=""></script>
   </head>
   <body>    
-    <?php include('header_no_registrado.php'); ?>
+    <?php include('componentes/header_no_registrado.php'); ?>
     
       <main>
         <?php include('generador_simple.php'); ?>
       </main>
     
-    <?php include('footer.php'); ?>
+    <?php include('componentes/footer.php'); ?>
   </body>
 </html>

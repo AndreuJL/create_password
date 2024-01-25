@@ -53,6 +53,7 @@ body {
   font-family: "Lora";
 
   & header {
+    position: fixed;
     background: var(--color-fondo-header);
     width: 100%;
     height: 60px;
@@ -70,6 +71,11 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      & h1 a{
+        text-decoration: none;
+        color: var(--color-blanco-letra);
+      }
 
       & nav {
         font-family: "Lora";
@@ -101,7 +107,7 @@ body {
         rgba(76, 78, 120, 1) 100%
       );
       width: 100%;
-      height: calc(100vh - 60px);
+      height: 100vh;
 
       display: flex;
       align-items: center;
@@ -132,6 +138,11 @@ body {
               height: 20px;
               margin-right: 15px;
             }
+
+            & input[type="checkbox"],
+            h3 {
+              cursor: pointer;
+            }
           }
         }
 
@@ -143,8 +154,9 @@ body {
             background: rgb(209, 209, 255);
             width: 500px;
             height: 40px;
-            border: 6px solid var(--color-lila-casillas);
+            border: 2px solid var(--color-lila-casillas);
             border-radius: 10px;
+            color: var(--color-negro-letra);
 
             display: flex;
             align-items: center;
@@ -152,10 +164,12 @@ body {
           }
 
           & .boton__generar {
+            background: var(--color-azul-oscuro);
             width: 100px;
             height: 40px;
-            border: 6px solid var(--color-lila-casillas);
+            border: 2px solid var(--color-lila-casillas);
             border-radius: 10px;
+            cursor: pointer;
 
             display: flex;
             align-items: center;
@@ -265,10 +279,82 @@ body {
       }
     }
 
-    /* -----------------REGISTRO--------------- */
+    /* ----------REGISTRO--------- */
+    & .container__registro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
+      width: 100%;
+      gap: 50px;
+      background: linear-gradient(
+        180deg,
+        rgba(27, 5, 89, 1) 0%,
+        rgba(27, 5, 89, 1) 14%,
+        rgba(76, 78, 120, 1) 100%
+      );
+
+      & form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        color: var(--color-blanco-letra);
+        height: 100vh;
+
+        & input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          background: rgb(244, 244, 244);
+          width: 100%;
+          height: 20px;
+          border: 2px solid var(--color-lila-casillas);
+          border-radius: 5px;
+          margin-bottom: 20px;
+          color: var(--color-negro-letra);
+        }
+
+        & .terminos {
+          display: flex;
+          margin-bottom: 20px;
+
+          & input[type="checkbox"]{
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            cursor: pointer;
+          }
+        }
+
+        & .botones__formulario {
+          display: flex;
+          gap: 0.625rem;
+
+          & input[type="submit"],
+          input[type="reset"], a {
+            cursor: pointer;
+            padding: 0;
+            width: 100px;
+            height: 30px;
+            border: 2px solid var(--color-lila-casillas);
+            border-radius: 10px;
+            background: var(--color-azul-oscuro);
+          }
+
+          & a{
+            text-decoration: none;
+            color: var(--color-blanco-letra);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
 
+  /* --------------FOOTER-------------- */
   & footer {
     background: linear-gradient(
       180deg,

@@ -6,7 +6,6 @@
         <article class="opciones">
           <div class="opcion">
             <input type="checkbox" name="mayusculas" id="mayusculas">
-            <div class="casilla"></div>
             <h3>MAYÚSCULAS</h3>
           </div>
           <div class="opcion">
