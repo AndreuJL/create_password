@@ -13,9 +13,9 @@
     <div class="container__registro">
       <form method="POST" novalidate onsubmit="return validar()">
         <label for="nombre">Nombre*</label>
-        <input type="text" name="nombre" id="nombre" />
+        <input type="text" name="nombre" id="nombre_r" />
         <label for="apellidos">Apellidos*</label>
-        <input type="text" name="apellidos" id="apellidos" />
+        <input type="text" name="apellidos" id="apellidos_r" />
         <label for="nombreusuario">Nombre de Usuario*</label>
         <input type="email" name="correo" id="correo" />
         <label for="nombreusuario">Correo electrónico*</label>
@@ -25,7 +25,7 @@
         <label for="contrasena2">Confirmar contraseña*</label>
         <input type="password" name="contrasenya2" id="contrasenya2" />
         <div class="terminos">
-          <input type="checkbox" name="condiciones">
+          <input type="checkbox" name="condiciones" id="check">
           <p>Aceptar los términos y condiciones</p>
         </div>
         <div class="botones__formulario">

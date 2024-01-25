@@ -72,7 +72,7 @@ body {
       align-items: center;
       justify-content: space-between;
 
-      & h1 a{
+      & h1 a {
         text-decoration: none;
         color: var(--color-blanco-letra);
       }
@@ -175,6 +175,20 @@ body {
             align-items: center;
             justify-content: center;
           }
+        }
+
+        & .copiar {
+          background: var(--color-azul-oscuro);
+          width: 100px;
+          height: 40px;
+          border: 2px solid var(--color-lila-casillas);
+          border-radius: 10px;
+          cursor: pointer;
+          margin-top: -40px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }
@@ -318,7 +332,7 @@ body {
           display: flex;
           margin-bottom: 20px;
 
-          & input[type="checkbox"]{
+          & input[type="checkbox"] {
             width: 20px;
             height: 20px;
             margin-right: 15px;
@@ -331,7 +345,8 @@ body {
           gap: 0.625rem;
 
           & input[type="submit"],
-          input[type="reset"], a {
+          input[type="reset"],
+          a {
             cursor: pointer;
             padding: 0;
             width: 100px;
@@ -341,7 +356,7 @@ body {
             background: var(--color-azul-oscuro);
           }
 
-          & a{
+          & a {
             text-decoration: none;
             color: var(--color-blanco-letra);
 

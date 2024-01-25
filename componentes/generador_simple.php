@@ -23,6 +23,8 @@
           <button class="boton__generar">Generar</button>
         </article>
 
+        <button class="copiar">Copiar</button>
+
       </section>
 
       <picture></picture>
