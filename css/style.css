@@ -224,18 +224,18 @@ body {
             border-radius: 10px;
             cursor: pointer;
             margin-top: -40px;
+            color: var(--color-blanco-letra);
 
             display: flex;
             align-items: center;
             justify-content: center;
           }
 
-          & .tus__contrasenyas {
-            width: 230px;
+          & a {
+            text-decoration: none;
 
-            & a {
-              text-decoration: none;
-              color: var(--color-blanco-letra);
+            & .tus__contrasenyas {
+              width: 230px;
             }
           }
         }
@@ -373,13 +373,13 @@ body {
           height: 20px;
           border: 2px solid var(--color-lila-casillas);
           border-radius: 5px;
-          margin-bottom: 20px;
+          margin: 5px 0 20px 0;
           color: var(--color-negro-letra);
         }
 
         & .terminos {
           display: flex;
-          margin-bottom: 20px;
+          margin: 5px 0 25px 0;
 
           & input[type="checkbox"] {
             width: 20px;
@@ -412,6 +412,85 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+          }
+        }
+      }
+    }
+
+    /* -------------COOKIES------------ */
+    & .privacidad__cookies {
+      padding: 50px 200px;
+      margin-top: 60px;
+
+      & a {
+        background: var(--color-azul-oscuro);
+        color: var(--color-blanco-letra);
+        width: 250px;
+        height: 40px;
+        border: 2px solid var(--color-lila-casillas);
+        border-radius: 10px;
+        text-decoration: none;
+        margin-top: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  /* --------LISTA DE CONTRASEÑAS------- */
+  & .contenedor__lista {
+    background: linear-gradient(
+      180deg,
+      rgba(27, 5, 89, 1) 0%,
+      rgba(27, 5, 89, 1) 14%,
+      rgba(76, 78, 120, 1) 100%
+    );
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    color: var(--color-blanco-letra);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & .subcaja__contrasenyas {
+      min-width: 500px;
+
+      display: flex;
+
+      & .nombre {
+        width: 75%;
+
+        & .header__nombre {
+          border-bottom: 2px solid var(--color-blanco-letra);
+          margin-bottom: 15px;
+        }
+
+        & .nombre__contrasenyas p {
+          margin-bottom: 15px;
+        }
+      }
+
+      & .contrasenyas {
+        width: 25%;
+
+        & .header__contrasenya {
+          border-bottom: 2px solid var(--color-blanco-letra);
+          margin-bottom: 15px;
+        }
+
+        & .contrasenya__cruz {
+          margin-bottom: 15px;
+          display: flex;
+          align-items: center;
+          gap: 1.25rem;
+
+          & img {
+            width: 18px;
+            cursor: pointer;
           }
         }
       }
