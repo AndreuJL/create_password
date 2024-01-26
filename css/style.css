@@ -99,6 +99,10 @@ body {
     align-items: center;
     justify-content: center;
 
+    & h2 {
+      margin-bottom: 20px;
+    }
+
     & .generador {
       background: linear-gradient(
         180deg,
@@ -122,6 +126,10 @@ body {
         justify-content: center;
         gap: 60px;
 
+        & h1 {
+          margin-bottom: -30px;
+        }
+
         & .opciones {
           display: flex;
           flex-direction: column;
@@ -143,6 +151,14 @@ body {
             h3 {
               cursor: pointer;
             }
+
+            & select {
+              font-size: 18px;
+              color: var(--color-negro-letra);
+              border: 2px solid var(--color-lila-casillas);
+              border-radius: 5px;
+              background-color: var(--color-blanco-letra);
+            }
           }
         }
 
@@ -163,7 +179,8 @@ body {
             justify-content: center;
           }
 
-          & .boton__generar {
+          & .boton__generar,
+          .boton__guardar {
             background: var(--color-azul-oscuro);
             width: 100px;
             height: 40px;
@@ -189,6 +206,38 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        & .zona__botones2 {
+          width: 100%;
+
+          display: flex;
+          align-content: center;
+          justify-content: space-between;
+
+          & .copiar__registrado,
+          .tus__contrasenyas {
+            background: var(--color-azul-oscuro);
+            width: 100px;
+            height: 40px;
+            border: 2px solid var(--color-lila-casillas);
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: -40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          & .tus__contrasenyas {
+            width: 230px;
+
+            & a {
+              text-decoration: none;
+              color: var(--color-blanco-letra);
+            }
+          }
         }
       }
     }
@@ -293,7 +342,7 @@ body {
       }
     }
 
-    /* ----------REGISTRO--------- */
+    /* -------REGISTRO/INICIO SESIÓN------ */
     & .container__registro {
       display: flex;
       align-items: center;
@@ -320,7 +369,7 @@ body {
         input[type="email"],
         input[type="password"] {
           background: rgb(244, 244, 244);
-          width: 100%;
+          width: 320px;
           height: 20px;
           border: 2px solid var(--color-lila-casillas);
           border-radius: 5px;

@@ -2,8 +2,8 @@
   <div class="container__header">
     <h1><a href="index.php">oppassword</a></h1>
     <nav>
-      <a href="" class="link1">Cerrar sesión</a>
-      <a href="" class="link2">Nombre Usuario</a>
+      <a href="index.php" class="cerrar__sesion">Cerrar sesión</a>
+      <p>Nombre Usuario</p>
     </nav>
   </div>
 </header>

@@ -8,10 +8,10 @@
     <script src=""></script>
   </head>
   <body>    
-    <?php include('componentes/header_no_registrado.php'); ?>
+    <?php include('componentes/header_registrado.php'); ?>
     
       <main>
-        <?php include('componentes/generador_simple.php'); ?>
+        <?php include('componentes/generador_complejo.php'); ?>
       </main>
     
     <?php include('componentes/footer.php'); ?>

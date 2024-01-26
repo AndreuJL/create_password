@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Registro</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,14 +12,15 @@
   <main>
     <div class="container__registro">
       <form method="POST" novalidate onsubmit="return validar()">
+        <h2>REGÍSTRATE</h2>
         <label for="nombre">Nombre*</label>
         <input type="text" name="nombre" id="nombre_r" />
         <label for="apellidos">Apellidos*</label>
         <input type="text" name="apellidos" id="apellidos_r" />
         <label for="nombreusuario">Nombre de Usuario*</label>
-        <input type="email" name="correo" id="correo" />
+        <input type="text" id="nombre_usuario" />       
         <label for="nombreusuario">Correo electrónico*</label>
-        <input type="text" id="nombre_usuario" />
+        <input type="email" name="correo" id="correo" />
         <label for="contrasena1">Contraseña*</label>
         <input type="password" name="contrasenya1" id="contrasenya1" />
         <label for="contrasena2">Confirmar contraseña*</label>
