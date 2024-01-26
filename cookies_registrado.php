@@ -22,6 +22,6 @@
           <a href="registrado.php">Volver a la página principal</a>
         </section>
       </main>    
-    <?php include('componentes/footer_no_registrado.php'); ?>
+    <?php include('componentes/footer_registrado.php'); ?>
   </body>
 </html>

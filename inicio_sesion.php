@@ -27,6 +27,6 @@
     </div>
   </main>
 
-  <?php include('componentes/footer.php') ?>
+  <?php include('componentes/footer_no_registrado.php.php') ?>
 </body>
 </html>

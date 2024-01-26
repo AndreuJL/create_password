@@ -84,6 +84,6 @@
               <article class="imagen3"></article>
             </section>
       </main>    
-    <?php include('componentes/footer_no_registrado.php'); ?>
+    <?php include('componentes/footer_registrado.php'); ?>
   </body>
 </html>

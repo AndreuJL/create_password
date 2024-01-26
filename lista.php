@@ -13,40 +13,41 @@
         <section class="contenedor__lista">
           <h2>Tus contraseñas</h2>
 
-            <article class="subcaja__contrasenyas">
+          <article class="subcaja__contrasenyas">
 
-              <article class="nombre">
-                <article class="header__nombre">Nombre</article>
-                <article class="nombre__contrasenyas">
-                  <!-- Donde poner los nombre de contraseñas -->
-                  <p>Facebook</p>
-                  <p>Google</p>
-                </article>
+            <article class="nombre">
+              <article class="header__nombre">Nombre</article>
+              <article class="nombre__contrasenyas">
+                <!-- Donde poner los nombre de contraseñas -->
+                <p>Facebook</p>
+                <p>Google</p>
+              </article>
+            </article>
+            
+            <article class="contrasenyas">
+              <article class="header__contrasenya">Contraseña</article>
+              <!-- Cada contrasenya__cruz es una contraseña a insertar -->
+              <article class="contrasenya__cruz">
+                <div class="contrasenya__individual">
+                  <p>s5f4fd5gd5</p>
+                </div>
+                <img src="svg/eliminar.svg" alt="eliminar">
               </article>
               
-              <article class="contrasenyas">
-                <article class="header__contrasenya">Contraseña</article>
-                <!-- Cada contrasenya__cruz es una contraseña a insertar -->
-                <article class="contrasenya__cruz">
-                  <div class="contrasenya__individual">
-                    <p>s5f4fd5gd5</p>
-                  </div>
-                  <img src="svg/eliminar.svg" alt="eliminar">
-                </article>
-                
-                <article class="contrasenya__cruz">
-                  <div class="contrasenya__individual">
-                    <p>s5f4fd5gd5</p>
-                  </div>
-                  <img src="svg/eliminar.svg" alt="eliminar">
-                </article>
-
+              <article class="contrasenya__cruz">
+                <div class="contrasenya__individual">
+                  <p>s5f4fd5gd5</p>
+                </div>
+                <img src="svg/eliminar.svg" alt="eliminar">
               </article>
 
             </article>
-         
+
+          </article>
+
+          <a href="registrado.php">Volver</a>
         </section>
       </main>    
-    <?php include('componentes/footer_no_registrado.php'); ?>
+    <?php include('componentes/footer_registrado.php'); ?>
   </body>
 </html>
