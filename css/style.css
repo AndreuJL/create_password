@@ -54,10 +54,12 @@ body {
 
   & header {
     position: fixed;
+    top: 0px;
     background: var(--color-fondo-header);
     width: 100%;
     height: 60px;
     z-index: 1;
+    transition: all 0.5s ease;
 
     display: flex;
     justify-content: center;
@@ -174,6 +176,8 @@ body {
             border: 2px solid var(--color-lila-casillas);
             border-radius: 10px;
             color: var(--color-negro-letra);
+            font-family: "Lora";
+            font-size: 28px;
 
             display: flex;
             align-items: center;

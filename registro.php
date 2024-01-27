@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="./js/scroll_header.js"></script>
 </head>
 <body>
   <?php include('componentes/header_no_registrado.php') ?>

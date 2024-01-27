@@ -1,4 +1,4 @@
-<header>
+<header id="header">
   <div class="container__header">
     <h1><a href="registrado.php">oppassword</a></h1>
     <nav>

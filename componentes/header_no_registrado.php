@@ -1,4 +1,4 @@
-<header>
+<header id="header">
   <div class="container__header">
     <h1><a href="index.php">oppassword</a></h1>
     <nav>

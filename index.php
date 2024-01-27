@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>oppasword</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src=""></script>
+    <script src="./js/scroll_header.js"></script>
+    
   </head>
   <body>    
     <?php include('componentes/header_no_registrado.php'); ?>   
@@ -31,8 +32,8 @@
                 </article>
 
                 <article class="zona__salida">
-                  <div class="salida__contrasena"></div>
-                  <button class="boton__generar">Generar</button>
+                  <div class="salida__contrasena" id="salida__contrasena"></div>
+                  <button class="boton__generar" id="generar">Generar</button>
                 </article>
 
                 <button class="copiar">Copiar</button>
@@ -68,5 +69,6 @@
             </section>
       </main>    
     <?php include('componentes/footer_no_registrado.php'); ?>
+    <script src="./js/generar_contrasenya_simple.js"></script>
   </body>
 </html>
