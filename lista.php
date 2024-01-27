@@ -15,32 +15,23 @@
 
           <article class="subcaja__contrasenyas">
 
-            <article class="nombre">
-              <article class="header__nombre">Nombre</article>
-              <article class="nombre__contrasenyas">
-                <!-- Donde poner los nombre de contraseñas -->
-                <p>Facebook</p>
-                <p>Google</p>
-              </article>
+            <article class="header__contrasenyas">
+              <p>Nombre</p>
+              <p>Contraseña</p>
             </article>
-            
-            <article class="contrasenyas">
-              <article class="header__contrasenya">Contraseña</article>
-              <!-- Cada contrasenya__cruz es una contraseña a insertar -->
-              <article class="contrasenya__cruz">
-                <div class="contrasenya__individual">
-                  <p>s5f4fd5gd5</p>
-                </div>
-                <img src="svg/eliminar.svg" alt="eliminar">
-              </article>
-              
-              <article class="contrasenya__cruz">
-                <div class="contrasenya__individual">
-                  <p>s5f4fd5gd5</p>
-                </div>
-                <img src="svg/eliminar.svg" alt="eliminar">
-              </article>
 
+            <article class="fila__contrasenya">
+              <p class="nombre__contrasenya">Google</p>
+              <p class="contrasenya__eliminar">555555
+                <img src="svg/eliminar.svg" alt="eliminar">
+              </p>             
+            </article>
+
+            <article class="fila__contrasenya">
+              <p class="nombre__contrasenya">Facebook</p>
+              <p class="contrasenya__eliminar">5555555555
+                <img src="svg/eliminar.svg" alt="eliminar">
+              </p>
             </article>
 
           </article>

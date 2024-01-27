@@ -458,39 +458,40 @@ body {
     align-items: center;
 
     & .subcaja__contrasenyas {
-      min-width: 500px;
-
+      width: 500px;
       display: flex;
+      flex-direction: column;
 
-      & .nombre {
-        width: 75%;
+      & .header__contrasenyas {
+        display: flex;
+        align-items: center;
+        gap: 255px;
+        border-bottom: 1px solid var(--color-blanco-letra);
 
-        & .header__nombre {
-          border-bottom: 2px solid var(--color-blanco-letra);
-          margin-bottom: 15px;
-        }
-
-        & .nombre__contrasenyas p {
-          margin-bottom: 15px;
+        & p {
+          min-width: 120px;
+          font-size: 18px;
         }
       }
 
-      & .contrasenyas {
-        width: 25%;
+      & .fila__contrasenya {
+        display: flex;
+        align-items: center;
+        gap: 255px;
+        border-bottom: 1px dashed rgb(180, 180, 180);
 
-        & .header__contrasenya {
-          border-bottom: 2px solid var(--color-blanco-letra);
-          margin-bottom: 15px;
+        & .nombre__contrasenya {
+          overflow: hidden;
+          width: 120px;
         }
 
-        & .contrasenya__cruz {
-          margin-bottom: 15px;
+        & .contrasenya__eliminar {
           display: flex;
-          align-items: center;
-          gap: 1.25rem;
+          justify-content: space-between;
+          gap: 15px;
 
           & img {
-            width: 18px;
+            width: 16px;
             cursor: pointer;
           }
         }
