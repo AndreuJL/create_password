@@ -6,7 +6,7 @@
     <title>oppasword</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/scroll_header.js"></script>
-    
+    <script src="./js/generar_tot.js" type="module"></script>    
   </head>
   <body>    
     <?php include('componentes/header_no_registrado.php'); ?>   
@@ -29,6 +29,11 @@
                     <input type="checkbox" name="numeros" id="numeros">
                     <h3>Números</h3>
                   </div>
+                  <!-- He puesto este check y select escondido con CSS para que javascript me pille que la casilla de simbolos no está seleccionada y para que me pilla que tiene la opcion de 6 carácteres siempre -->
+                  <div class="simbolo__escondido" id="simbolos"></div>
+                  <select class="select__escondido" name="longitud" id="longitud">
+                    <option value="6caracteres">6 carácteres (poco segura)</option>
+                  </select>
                 </article>
 
                 <article class="zona__salida">
@@ -69,6 +74,6 @@
             </section>
       </main>    
     <?php include('componentes/footer_no_registrado.php'); ?>
-    <script src="./js/generar_contrasenya_simple.js"></script>
+    
   </body>
 </html>

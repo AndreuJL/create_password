@@ -6,6 +6,7 @@
     <title>oppasword</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/scroll_header.js"></script>
+    <script src="./js/generar_tot.js" type="module"></script>
   </head>
   <body>    
     <?php include('componentes/header_registrado.php'); ?>    
@@ -42,8 +43,8 @@
                 </article>
 
                 <article class="zona__salida">
-                  <div class="salida__contrasena"></div>
-                  <button class="boton__generar">Generar</button>
+                  <div class="salida__contrasena" id="salida__contrasena"></div>
+                  <button class="boton__generar" id="generar">Generar</button>
                   <button class="boton__guardar">Guardar</button>
                 </article>
 

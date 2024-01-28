@@ -163,6 +163,14 @@ body {
               background-color: var(--color-blanco-letra);
             }
           }
+
+          /* Tengo que poner esto para que no me de error Javascript, ya que no encuentra los simbolos */
+          & .simbolo__escondido{
+            display: none;
+          }
+          & .select__escondido{
+            display: none;
+          }
         }
 
         & .zona__salida {
