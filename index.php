@@ -6,7 +6,8 @@
     <title>oppasword</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/scroll_header.js"></script>
-    <script src="./js/generar_tot.js" type="module"></script>    
+    <script src="./js/generar_contrasenya.js" type="module"></script>
+    <script src="./js/copiar_contrasenya.js"></script>
   </head>
   <body>    
     <?php include('componentes/header_no_registrado.php'); ?>   
@@ -41,7 +42,7 @@
                   <button class="boton__generar" id="generar">Generar</button>
                 </article>
 
-                <button class="copiar">Copiar</button>
+                <button class="copiar" id="copiar">Copiar</button>
 
               </section>
 
@@ -73,7 +74,6 @@
               <article class="imagen3"></article>
             </section>
       </main>    
-    <?php include('componentes/footer_no_registrado.php'); ?>
-    
+    <?php include('componentes/footer_no_registrado.php'); ?>    
   </body>
 </html>

@@ -6,7 +6,8 @@
     <title>oppasword</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/scroll_header.js"></script>
-    <script src="./js/generar_tot.js" type="module"></script>
+    <script src="./js/generar_contrasenya.js" type="module"></script>
+    <script src="./js/copiar_contrasenya.js"></script>
   </head>
   <body>    
     <?php include('componentes/header_registrado.php'); ?>    
@@ -49,7 +50,7 @@
                 </article>
 
                 <article class="zona__botones2">
-                  <button class="copiar__registrado">Copiar</button>
+                  <button class="copiar__registrado" id="copiar">Copiar</button>
                   <a href="lista.php">
                     <button class="tus__contrasenyas">Tus contraseñas</button>
                   </a>
