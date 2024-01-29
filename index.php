@@ -8,6 +8,7 @@
     <script src="./js/scroll_header.js"></script>
     <script src="./js/generar_contrasenya.js" type="module"></script>
     <script src="./js/copiar_contrasenya.js"></script>
+    <script src="./js/pruebas.js"></script>
   </head>
   <body>    
     <?php include('componentes/header_no_registrado.php'); ?>   

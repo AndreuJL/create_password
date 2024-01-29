@@ -30,15 +30,22 @@ export function generar_6caracteres() {
   };
 
   // MAYÚSCULAS
-  // Si solo están marcadas las mayúsculas con un for de 6 vueltas crea un número aleatorio de entre 65 y 90 que son las mayúsculas en la tabla Ascii, los paso a mayúsculas de la tabla Ascii y vol anexando carácteres al string "contrasenya_may",
+  // Si solo están marcadas las mayúsculas con un for de 6 vueltas crea un número aleatorio de entre 65 y 90 que son las mayúsculas en la tabla Ascii, los paso a mayúsculas de la tabla Ascii y voy anexando carácteres al string "contrasenya_may",
   if (mayusculas.checked && !minusculas.checked && !numeros.checked  && !simbolos.checked) {
     let contrasenya_may = "";
     for (let i = 0; i < 6; i++) {
       let may_aleat_num = Math.floor(Math.random() * (90 - 65) + 65);
       let may_aleat = String.fromCharCode(may_aleat_num);
+
       contrasenya_may += may_aleat;
-      contrasenya.textContent = contrasenya_may;
     }
+
+    let array_contrasenya_may = contrasenya_may.split("");
+
+    
+
+
+    contrasenya.textContent = contrasenya_may;
   };
 
   // MINÚSCULAS
