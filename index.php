@@ -10,7 +10,7 @@
     <script src="./js/copiar_contrasenya.js"></script>
     <script src="./js/pruebas.js"></script>
   </head>
-  <body>    
+  <body>
     <?php include('componentes/header_no_registrado.php'); ?>   
       <main>
             <section class="generador">
