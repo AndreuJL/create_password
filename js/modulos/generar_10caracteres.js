@@ -23,6 +23,7 @@ export function generar_10caracteres(){
   let array_contrasenya_simb = ["!", "¡", "¿", "?", "$", "%", "&", "=", "+", "-", "*", "/"];
 
   do {
+    // Variable global para se defina dentro de anidaciones.
     var comprobante = true;
 
     // SIN ELECCIÓN
@@ -78,6 +79,7 @@ export function generar_10caracteres(){
       for (let i = 0; i < 10; i++) {
         let num_aleat = Math.floor(Math.random() * (11 - 0) + 0);
         let simbolo_aleat = array_contrasenya_simb[num_aleat];
+        // Variable global para que se defina fura de los condicionales y se pueda validar posteriormente.
         var contrasenya_fin = contrasenya_simb += simbolo_aleat;
       }
       contrasenya.textContent = contrasenya_fin;

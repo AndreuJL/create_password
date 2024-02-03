@@ -16,6 +16,7 @@
               <section class="izquierda">
 
                 <h1>Genera tu contraseña personalizada</h1>
+                <p>Escoge almenos 2 casillas para hacer tu contrasenya más segura.</p>
 
                 <article class="opciones">
                   <div class="opcion">

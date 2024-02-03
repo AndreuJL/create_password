@@ -133,6 +133,10 @@ body {
           margin-bottom: -30px;
         }
 
+        & p {
+          margin-top: -30px;
+        }
+
         & .opciones {
           display: flex;
           flex-direction: column;
@@ -383,7 +387,7 @@ body {
         input[type="password"] {
           background: rgb(244, 244, 244);
           width: 320px;
-          height: 20px;
+          height: 25px;
           border: 2px solid var(--color-lila-casillas);
           border-radius: 5px;
           margin: 5px 0 20px 0;
