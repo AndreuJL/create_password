@@ -22,11 +22,14 @@ export function generar_6caracteres() {
   // Para los símbolos simplemente he hecho un Array con los que quiero poner (no son todos ya que algunos serían un poco complicados para los usuarios). Se usará más adelante.
   let array_contrasenya_simb = ["!", "¡", "¿", "?", "$", "%", "&", "=", "+", "-", "*", "/"];  
 
+  do {
+    var comprobante = true;
   // SIN ELECCIÓN
   // Si no se elije una opción saldrá un mensage.
   if (!mayusculas.checked && !minusculas.checked && !numeros.checked && !simbolos.checked) {
     let elige_opcion = "Por favor elija una opción";
     contrasenya.textContent = elige_opcion;
+    throw new Error('Salir del proceso, ya que no puede pasar las comprobaciones.');
   };
 
   // MAYÚSCULAS
@@ -36,16 +39,10 @@ export function generar_6caracteres() {
     for (let i = 0; i < 6; i++) {
       let may_aleat_num = Math.floor(Math.random() * (90 - 65) + 65);
       let may_aleat = String.fromCharCode(may_aleat_num);
-
       contrasenya_may += may_aleat;
+      contrasenya.textContent = contrasenya_may;
     }
-
-    let array_contrasenya_may = contrasenya_may.split("");
-
-    
-
-
-    contrasenya.textContent = contrasenya_may;
+    throw new Error('Salir del proceso, ya que no puede pasar las comprobaciones.');
   };
 
   // MINÚSCULAS
@@ -58,6 +55,7 @@ export function generar_6caracteres() {
       contrasenya_mim += min_aleat;
       contrasenya.textContent = contrasenya_mim;
     }
+    throw new Error('Salir del proceso, ya que no puede pasar las comprobaciones.');
   };
 
   // NÚMEROS
@@ -69,6 +67,7 @@ export function generar_6caracteres() {
       contrasenya_num += num_aleat;
       contrasenya.textContent = contrasenya_num;
     }
+    throw new Error('Salir del proceso, ya que no puede pasar las comprobaciones.');
   };
 
   // SÍMBOLOS
@@ -78,9 +77,9 @@ export function generar_6caracteres() {
     for (let i = 0; i < 6; i++) {
       let num_aleat = Math.floor(Math.random() * (11 - 0) + 0);
       let simbolo_aleat = array_contrasenya_simb[num_aleat];
-      contrasenya_simb += simbolo_aleat;
+      var contrasenya_fin = contrasenya_simb += simbolo_aleat;
     }
-    contrasenya.textContent = contrasenya_simb;
+    contrasenya.textContent = contrasenya_fin;
   };
 
   // MAYÚSCULAS + MINÚSCULAS
@@ -100,9 +99,9 @@ export function generar_6caracteres() {
     let contrasenya_may_min_ord = contrasenya_may + contrasenya_mim;
     let array_contrasenya_may_min_ord = contrasenya_may_min_ord.split("");
     let array_contrasenya_may_min = desordenar(array_contrasenya_may_min_ord);
-    let contrasenya_may_min = array_contrasenya_may_min.toString().replace(/,/g, "");
+    var contrasenya_fin = array_contrasenya_may_min.toString().replace(/,/g, "");
     // "/,/g" quiere decir que quíta todas las , del String.
-    contrasenya.textContent = contrasenya_may_min;
+    contrasenya.textContent = contrasenya_fin;
   };
 
   // MAYÚSCULAS + NÚMEROS
@@ -121,8 +120,8 @@ export function generar_6caracteres() {
     let contrasenya_may_num_ord = contrasenya_may + contrasenya_num;
     let array_contrasenya_may_num_ord = contrasenya_may_num_ord.split("");
     let array_contrasenya_may_num = desordenar(array_contrasenya_may_num_ord);
-    let contrasenya_may_num = array_contrasenya_may_num.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_may_num;
+    var contrasenya_fin = array_contrasenya_may_num.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
 
   // MINÚSCULAS + NÚMEROS
@@ -141,8 +140,8 @@ export function generar_6caracteres() {
     let contrasenya_min_num_ord = contrasenya_min + contrasenya_num;
     let array_contrasenya_min_num_ord = contrasenya_min_num_ord.split("");
     let array_contrasenya_min_num = desordenar(array_contrasenya_min_num_ord);
-    let contrasenya_min_num = array_contrasenya_min_num.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_min_num;
+    var contrasenya_fin = array_contrasenya_min_num.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
 
   // MAYÚSCULAS + SÍMBOLOS
@@ -162,8 +161,8 @@ export function generar_6caracteres() {
     let contrasenya_may_simb_ord = contrasenya_may + contrasenya_simb;
     let array_contrasenya_may_simb_ord = contrasenya_may_simb_ord.split("");
     let array_contrasenya_may_simb = desordenar(array_contrasenya_may_simb_ord);
-    let contrasenya_may_simb = array_contrasenya_may_simb.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_may_simb;
+    var contrasenya_fin = array_contrasenya_may_simb.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
       
   // MINÚSCULAS + SÍMBOLOS
@@ -182,8 +181,8 @@ export function generar_6caracteres() {
     let contrasenya_min_simb_ord = contrasenya_min + contrasenya_simb;
     let array_contrasenya_min_simb_ord = contrasenya_min_simb_ord.split("");
     let array_contrasenya_min_simb = desordenar(array_contrasenya_min_simb_ord);
-    let contrasenya_min_simb = array_contrasenya_min_simb.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_min_simb;
+    var contrasenya_fin = array_contrasenya_min_simb.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
   
   // NÚMEROS + SÍMBOLOS
@@ -201,8 +200,8 @@ export function generar_6caracteres() {
     let contrasenya_num_simb_ord = contrasenya_num + contrasenya_simb;
     let array_contrasenya_num_simb_ord = contrasenya_num_simb_ord.split("");
     let array_contrasenya_num_simb = desordenar(array_contrasenya_num_simb_ord);
-    let contrasenya_num_simb = array_contrasenya_num_simb.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_num_simb;
+    var contrasenya_fin = array_contrasenya_num_simb.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
 
   // MAYÚSCULAS + MINÚSCULAS + NÚMEROS
@@ -226,8 +225,8 @@ export function generar_6caracteres() {
     let contrasenya_may_min_num_ord = contrasenya_may + contrasenya_min + contrasenya_num;
     let array_contrasenya_may_min_num_ord = contrasenya_may_min_num_ord.split("");
     let array_contrasenya_may_min_num = desordenar(array_contrasenya_may_min_num_ord);
-    let contrasenya_may_min_num = array_contrasenya_may_min_num.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_may_min_num;
+    var contrasenya_fin = array_contrasenya_may_min_num.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
     
   // MINÚSCULAS + NÚMEROS + SÍMBOLOS
@@ -250,8 +249,8 @@ export function generar_6caracteres() {
     let contrasenya_min_num_simb_ord = contrasenya_mim + contrasenya_num + contrasenya_simb;
     let array_contrasenya_min_num_simb_ord = contrasenya_min_num_simb_ord.split("");
     let array_contrasenya_min_num_simb = desordenar(array_contrasenya_min_num_simb_ord);
-    let contrasenya_min_num_simb = array_contrasenya_min_num_simb.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_min_num_simb;
+    var contrasenya_fin = array_contrasenya_min_num_simb.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
 
   // MAYÚSCULAS + NÚMEROS + SÍMBOLOS
@@ -274,8 +273,8 @@ export function generar_6caracteres() {
     let contrasenya_may_num_simb_ord = contrasenya_may + contrasenya_num + contrasenya_simb;
     let array_contrasenya_may_num_simb_ord = contrasenya_may_num_simb_ord.split("");
     let array_contrasenya_may_num_simb = desordenar(array_contrasenya_may_num_simb_ord);
-    let contrasenya_may_num_simb = array_contrasenya_may_num_simb.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_may_num_simb;
+    var contrasenya_fin = array_contrasenya_may_num_simb.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
 
   // MAYÚSCULAS + MINÚSCULAS + SÍMBOLOS
@@ -299,8 +298,8 @@ export function generar_6caracteres() {
     let contrasenya_min_num_simb_ord = contrasenya_may + contrasenya_min + contrasenya_simb;
     let array_contrasenya_min_num_simb_ord = contrasenya_min_num_simb_ord.split("");
     let array_contrasenya_min_num_simb = desordenar(array_contrasenya_min_num_simb_ord);
-    let contrasenya_min_num_simb = array_contrasenya_min_num_simb.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_min_num_simb;
+    var contrasenya_fin = array_contrasenya_min_num_simb.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
   };
 
   // MAYÚSCULAS + MINÚSCULAS + NÚMEROS + SÍMBOLOS
@@ -330,7 +329,64 @@ export function generar_6caracteres() {
     let contrasenya_may_min_num_simb_ord = contrasenya_may + contrasenya_min + contrasenya_num + contrasenya_simb;
     let array_contrasenya_may_min_num_simb_ord = contrasenya_may_min_num_simb_ord.split("");
     let array_contrasenya_may_min_num_simb = desordenar(array_contrasenya_may_min_num_simb_ord);
-    let contrasenya_may_min_num_simb = array_contrasenya_may_min_num_simb.toString().replace(/,/g, "");
-    contrasenya.textContent = contrasenya_may_min_num_simb;
-  };
+    var contrasenya_fin = array_contrasenya_may_min_num_simb.toString().replace(/,/g, "");
+    contrasenya.textContent = contrasenya_fin;
+    };
+
+    // ---------------------------COMPROBACIONES--------------------------------
+    // Que no se repitan carácteres en la misma contraseña
+    for (let i = 0; i < contrasenya_fin.length; i++) {
+      let caracter_a_comprobar = contrasenya_fin[i];
+
+      for (let j = 0; j < contrasenya_fin.length; j++) {
+        let contenido_indice = contrasenya_fin[j];
+        if (caracter_a_comprobar === contenido_indice) {
+          if (i !== j && caracter_a_comprobar === contenido_indice) {
+            comprobante = false;
+          }
+        }
+      }
+    }
+
+    // Que no hayan más de 1 mayúscula o 1 minúscula una al lado de otra (aj) (KP).
+    let may_consecutivas = /[A-Z]{2}/;
+    let min_consecutivas = /[a-z]{2}/;
+
+    if (may_consecutivas.test(contrasenya_fin) || min_consecutivas.test(contrasenya_fin)) {
+      comprobante = false;
+    }
+
+    // Que no haya 3 letras del abacedario seguidas, indiferentemente de si son mayúsculas (ABC), minúsculas (abc) o una combinación (AbC).
+    // Recorremos la contrasenya hasta la posición -2 ya que comprobaremos cada valor con los 2 valores siguientes.
+    for (let i = 0; i < contrasenya_fin.length - 2; i++) {
+      // Cojemos el valor actual y lo pasamos a Ascii.
+      let valor_actual = contrasenya_fin[i].charCodeAt(0);
+      // Lo mismo en el valor siguiente.
+      let valor_siguiente1 = contrasenya_fin[i + 1].charCodeAt(0);
+      let valor_siguiente2 = contrasenya_fin[i + 2].charCodeAt(0);
+
+      if ((valor_siguiente1 == valor_actual + 1 || valor_siguiente1 == valor_actual + 33 || valor_siguiente1 == valor_actual - 31) &&
+        (valor_siguiente2 == valor_actual + 2 || valor_siguiente2 == valor_actual + 34 || valor_siguiente2 == valor_actual - 30)) {
+        comprobante = false;
+      }
+    }
+
+    // Para que no ponga 2 números consecutivos seguidos uno al lado de otro (56) (23)
+    for (let i = 0; i < contrasenya_fin.length - 1; i++) {
+    let valor_actual = contrasenya_fin[i];
+    let valor_siguiente1 = contrasenya_fin[i + 1];
+
+    if (valor_actual == valor_siguiente1 - 1) {
+      comprobante = false;
+    }
+  }
+
+    // Para que no pueda haber 3 o más números seguidos
+    let tres_o_mas_numeros_consecutivos = /\d{3,}/g;
+    
+    if (tres_o_mas_numeros_consecutivos.test(contrasenya_fin)) {
+      comprobante = false;
+    }
+
+  } while (comprobante == false);
 };
