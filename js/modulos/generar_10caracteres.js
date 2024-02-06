@@ -409,7 +409,7 @@ export function generar_10caracteres(){
       let valor_siguiente2 = contrasenya_fin[i + 2].charCodeAt(0);
 
       if ((valor_siguiente1 == valor_actual + 1 || valor_siguiente1 == valor_actual + 33 || valor_siguiente1 == valor_actual - 31) &&
-        (valor_siguiente2 == valor_actual + 2 || valor_siguiente2 == valor_actual + 34 || valor_siguiente2 == valor_actual - 30)) {
+      (valor_siguiente2 == valor_actual + 2 || valor_siguiente2 == valor_actual + 34 || valor_siguiente2 == valor_actual - 30)) {
         comprobante = false;
       }
     }
@@ -429,6 +429,20 @@ export function generar_10caracteres(){
     
     if (tres_o_mas_numeros_consecutivos.test(contrasenya_fin)) {
       comprobante = false;
+    }
+
+    // Para que no se repita la misma letra en mayúscula y en minúscula (uU)
+    for (let i = 0; i < contrasenya_fin.length - 2; i++) {
+      // Cojemos el valor actual y lo pasamos a Ascii.
+      let valor_actual = contrasenya_fin[i].charCodeAt(0);
+
+      for (let j = 0; j < contrasenya_fin.length; j++) {
+        let valor_comparacion = contrasenya_fin[j].charCodeAt(0);
+        
+        if (valor_actual == valor_comparacion + 32 || valor_actual == valor_comparacion - 32) {
+          comprobante = false;
+        }
+      }
     }
     
   } while ((comprobante == false));

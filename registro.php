@@ -6,6 +6,7 @@
   <title>Registro</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="./js/scroll_header.js"></script>
+  <script src="./js/validaciones.js"></script>
 </head>
 <body>
   <?php include('componentes/header_no_registrado.php') ?>
@@ -15,13 +16,13 @@
       <form method="POST" novalidate onsubmit="return validar()">
         <h2>REGÍSTRATE</h2>
         <label for="nombre">Nombre*</label>
-        <input type="text" name="nombre" id="nombre_r" />
+        <input type="text" name="nombre" id="nombre" />
         <label for="apellidos">Apellidos*</label>
-        <input type="text" name="apellidos" id="apellidos_r" />
+        <input type="text" name="apellidos" id="apellidos" />
         <label for="nombreusuario">Nombre de Usuario*</label>
         <input type="text" id="nombre_usuario" />       
         <label for="nombreusuario">Correo electrónico*</label>
-        <input type="email" name="correo" id="correo" />
+        <input type="email" name="correo" id="mail" />
         <label for="contrasena1">Contraseña*</label>
         <input type="password" name="contrasenya1" id="contrasenya1" />
         <label for="contrasena2">Confirmar contraseña*</label>
