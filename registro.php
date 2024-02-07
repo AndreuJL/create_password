@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +14,18 @@
 
   <main>
     <div class="container__registro">
-      <form method="POST" novalidate onsubmit="return validar()">
+      <form action="./php/procesar_registro.php" method="POST" novalidate onsubmit="return validar()">
         <h2>REGÍSTRATE</h2>
         <label for="nombre">Nombre*</label>
         <input type="text" name="nombre" id="nombre" />
         <label for="apellidos">Apellidos*</label>
         <input type="text" name="apellidos" id="apellidos" />
         <label for="nombreusuario">Nombre de Usuario*</label>
-        <input type="text" id="nombre_usuario" />       
+        <input type="text" name="nombre_usuario" id="nombre_usuario" />       
         <label for="nombreusuario">Correo electrónico*</label>
         <input type="email" name="correo" id="mail" />
         <label for="contrasena1">Contraseña*</label>
-        <input type="password" name="contrasenya1" id="contrasenya1" />
+        <input type="password" name="contrasenya_acceso" id="contrasenya1" />
         <label for="contrasena2">Confirmar contraseña*</label>
         <input type="password" name="contrasenya2" id="contrasenya2" />
         <div class="terminos">
@@ -33,7 +33,7 @@
           <p>Aceptar los términos y condiciones</p>
         </div>
         <div class="botones__formulario">
-          <input type="submit" name="aceptar" value="Aceptar" />
+          <input type="submit" name="submit" value="Aceptar" />
           <input type="reset" name="limpiar" value="Limpiar">
           <a href="index.php">Volver</a>
         </div>
