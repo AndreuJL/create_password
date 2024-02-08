@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio de sesión</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="./js/scroll_header.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+
   <?php include('componentes/header_no_registrado.php') ?>
 
   <main>
     <div class="container__registro">
-      <form method="POST" novalidate onsubmit="return validar()">
+      <form action="./php/procesar_iniciar_sesion.php" method="POST" novalidate onsubmit="return validar()">
         <h2>INICIAR SESIÓN</h2>
-        <label for="nombreusuario">Nombre de Usuario*</label>
-        <input type="text" id="nombre_usuario" />
-        <label for="contrasena1">Contraseña*</label>
-        <input type="password" name="contrasenya" id="contrasenya1" />
+        <label for="nombre_usuarioSesion">Nombre de Usuario*</label>
+        <input type="text" name="nombre_usuarioSesion" id="nombre_usuarioSesion" />
+        <label for="contrasenya_acceso">Contraseña*</label>
+        <input type="password" name="contrasenya_acceso" id="contrasenya_acceso" />
         <div class="botones__formulario">
           <input type="submit" name="aceptar" value="Aceptar" />
           <a href="index.php">Volver</a>
@@ -28,6 +30,6 @@
     </div>
   </main>
 
-  <?php include('componentes/footer_no_registrado.php.php') ?>
+  <?php include('componentes/footer_no_registrado.php') ?>
 </body>
 </html>

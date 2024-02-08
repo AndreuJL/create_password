@@ -29,9 +29,9 @@
       $sentencia = "INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `contrasenya`, `correo`) VALUES (NULL, '$nombre_usuario', '$contrasenya_acceso', '$correo')";
       $resultado_insert_usuario = mysqli_query($conector,$sentencia);
       
-      // Si se ha introducido el el usuario en la base de datos nos redirigimos a registrado.php
+      // Si se ha introducido el el usuario en la base de datos nos redirigimos a inicio_sesion.php
       if($resultado_insert_usuario){
-        header("Location: ../registrado.php");
+        header("Location: ../inicio_sesion.php");
         die();
 
       // En caso contrario volveremos a la pantalla de registro.php

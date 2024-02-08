@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  // Si el usuario no está logeado se redirigirá a index.php.
+  if (!isset($_SESSION['logeado'])) {
+    header('Location: index.php');
+    exit;
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
