@@ -204,6 +204,8 @@ body {
             border: 2px solid var(--color-lila-casillas);
             border-radius: 10px;
             cursor: pointer;
+            text-decoration: none;
+            color: var(--color-blanco-letra);
 
             display: flex;
             align-items: center;

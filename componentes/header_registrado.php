@@ -6,4 +6,4 @@
       <?php  echo "<p>" . $_SESSION['nombre_usuarioSesion'] . "</p>" ?>
     </nav>
   </div>
-</header> 
+</header>

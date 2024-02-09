@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  // Si el usuario no está logeado se redirigirá a index.php.
+  if (!isset($_SESSION['logeado'])) {
+    header('Location: cookies_registrado.php');
+    exit();
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/scroll_header.js"></script>
   </head>
-  <body>    
+  <body>
     <?php include('componentes/header_registrado.php'); ?>   
       <main>
         <section class="privacidad__cookies">

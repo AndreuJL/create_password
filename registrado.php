@@ -56,7 +56,7 @@
                 <article class="zona__salida">
                   <div class="salida__contrasena" id="salida__contrasena"></div>
                   <button class="boton__generar" id="generar">Generar</button>
-                  <button class="boton__guardar">Guardar</button>
+                  <a href="./php/guardar_contrasenya.php" class="boton__guardar">Guardar</a>
                 </article>
 
                 <article class="zona__botones2">
