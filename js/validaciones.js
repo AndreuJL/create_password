@@ -1,9 +1,9 @@
 function alerta(mensaje_error) {
   Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: mensaje_error,     
-    });
+    icon: "error",
+    title: "Oops...",
+    text: mensaje_error,     
+  });
 }
 
 function validar() {

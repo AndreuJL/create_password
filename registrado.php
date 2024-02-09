@@ -3,7 +3,7 @@
   // Si el usuario no está logeado se redirigirá a index.php.
   if (!isset($_SESSION['logeado'])) {
     header('Location: index.php');
-    exit;
+    exit();
   }
 ?>
 

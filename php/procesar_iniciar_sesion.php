@@ -16,7 +16,7 @@
   //Otra manera de manipular el error de la Base de datos.
   if (mysqli_connect_errno()) {
     // Si tiene algún error me sale del proceso y me dice el error.
-	exit('Fallo al conectar con MySQL: ' . mysqli_connect_error());
+	  exit();
   }
 
   // Preparamos nuestra sentencia SQL para evitar la SQL injection y que nos puedan robar datos.
@@ -39,37 +39,24 @@
         // Ahora creamos las variables de sesión para que sepamos que el usuario está logeado, funcionaría como las cookies.
         session_regenerate_id();
         $_SESSION['logeado'] = TRUE;
-        $_SESSION['nombre_usuario'] = $_POST['nombre_usuarioSesion'];
+        $_SESSION['nombre_usuarioSesion'] = $_POST['nombre_usuarioSesion'];
         $_SESSION['id_usuario'] = $id_usuario;
 
         header("Location: ../registrado.php");
-        die();
 
       } else {
         // Si la contraseña es incorrecta.
-        $estado_contrasenya = FALSE;
-        echo "dsafdfgfdfsgdf";
-        // header("Location: ../inicio_sesion.php");
-        // die();
+        $_SESSION["contrasenya_incorrecta"] = "incorrecta";
+        header("Location: ../inicio_sesion.php");
       }
     } else {
       // Si el usuario no es correcto.
-      echo 'Incorrect username and/or password!';
+      $_SESSION["usuario_incorrecto"] = "incorrecto";
+      header("Location: ../inicio_sesion.php");
     }
-
 
     $stmt->close();
-}
+  }
 
 ?>
-<script type="text/javascript">
-     let estado_contrasenya = "<?php echo $estado_contrasenya ?>";
-    if ($estado_contrasenya == "FALSE") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "La contraseña es incorrcta, por favor, vuelva a intentarlo.",     
-      });
-    }
-    estado_contrasenya = "TRUE";
-  </script>
+
