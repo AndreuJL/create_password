@@ -47,7 +47,7 @@ function validar() {
   }
 
   // ----------VALIDAR CONTRASEÑAS------------
-  let valorContrasena1 = document.getElementById("contrasenya1").value;
+  let valorContrasena1 = document.getElementById("contrasenya_acceso").value;
   let valorContrasena2 = document.getElementById("contrasenya2").value;
 
   // Que haya una contraseña

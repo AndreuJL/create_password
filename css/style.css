@@ -573,29 +573,3 @@ body {
     }
   }
 }
-
-/* ------------- ERROR DE REGISTRO ---------------- */
-.fallo__registro{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  color: var(--color-blanco-letra);
-
-  background: linear-gradient(
-      180deg,
-      rgba(27, 5, 89, 1) 0%,
-      rgba(27, 5, 89, 1) 14%,
-      rgba(76, 78, 120, 1) 100%
-    );;
-
-   & .boton__fallo {
-    text-decoration: none;
-    color: var(--color-blanco-letra);
-    padding: 5px 10px;
-    background: var(--color-azul-claro);
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-}

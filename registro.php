@@ -20,13 +20,13 @@
         <input type="text" name="nombre" id="nombre" />
         <label for="apellidos">Apellidos*</label>
         <input type="text" name="apellidos" id="apellidos" />
-        <label for="nombreusuario">Nombre de Usuario*</label>
+        <label for="nombre_usuario">Nombre de Usuario*</label>
         <input type="text" name="nombre_usuario" id="nombre_usuario" />       
-        <label for="nombreusuario">Correo electrónico*</label>
+        <label for="mail">Correo electrónico*</label>
         <input type="email" name="correo" id="mail" />
-        <label for="contrasena1">Contraseña*</label>
-        <input type="password" name="contrasenya_acceso" id="contrasenya1" />
-        <label for="contrasena2">Confirmar contraseña*</label>
+        <label for="contrasenya_acceso">Contraseña*</label>
+        <input type="password" name="contrasenya_acceso" id="contrasenya_acceso" />
+        <label for="contrasenya2">Confirmar contraseña*</label>
         <input type="password" name="contrasenya2" id="contrasenya2" />
         <div class="terminos">
           <input type="checkbox" name="condiciones" id="check">

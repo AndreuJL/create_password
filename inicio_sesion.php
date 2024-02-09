@@ -1,19 +1,3 @@
-<?php
-  session_start();
-  $comprobador_contrasenya = "";
-  $comprobador_usuario = "";
-
-  if ($_SESSION["contrasenya_incorrecta"] == "incorrecta") {
-    $comprobador_contrasenya = "falso";
-  }
-
-  if ($_SESSION["usuario_incorrecto"] == "incorrecto") {
-    $comprobador_usuario = "falso";
-  }
-  
-  
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,28 +9,6 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-
-  <script type="text/javascript">
-    let comprobador_contrasenya = "<?php echo $comprobador_contrasenya ?>";
-    let comprobador_usuario = "<?php echo $comprobador_usuario ?>";
-
-    if (comprobador_contrasenya == "falso") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Contraseña incorrecta, por favor vuelva a intentarlo.",     
-      });
-    }
-
-    if (comprobador_usuario == "falso") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Usuario incorrecto, por favor vuelva a intentarlo.",     
-      });
-    }
-    
-  </script>
 
   <?php include('componentes/header_no_registrado.php') ?>
 
@@ -67,13 +29,8 @@
       <picture></picture>
     </div>
   </main>
-
+  
   <?php include('componentes/footer_no_registrado.php') ?>
 
-  <?php
-    $comprobador_contrasenya = "";
-    $comprobador_usuario = "";
-    exit;
-  ?>
 </body>
 </html>
