@@ -14,9 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>oppasword</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/scroll_header.js"></script>
     <script src="./js/generar_contrasenya.js" type="module"></script>
     <script src="./js/copiar_contrasenya.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"></script>
+    <script src="./js/guardar_contrasenya.js"></script>
   </head>
   <body>    
     <?php include('componentes/header_registrado.php'); ?>    
@@ -56,7 +61,7 @@
                 <article class="zona__salida">
                   <div class="salida__contrasena" id="salida__contrasena"></div>
                   <button class="boton__generar" id="generar">Generar</button>
-                  <a href="./php/guardar_contrasenya.php" class="boton__guardar">Guardar</a>
+                  <button class="boton__guardar" id="boton_guardar">Guardar</button>
                 </article>
 
                 <article class="zona__botones2">
@@ -97,5 +102,6 @@
             </section>
       </main>    
     <?php include('componentes/footer_registrado.php'); ?>
+
   </body>
 </html>
