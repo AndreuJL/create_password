@@ -66,9 +66,7 @@
 
                 <article class="zona__botones2">
                   <button class="copiar__registrado" id="copiar">Copiar</button>
-                  <a href="lista.php">
-                    <button class="tus__contrasenyas">Tus contraseñas</button>
-                  </a>
+                  <a href="lista.php" class="tus__contrasenyas">Tus contraseñas</a>
                 </article>
 
               </section>

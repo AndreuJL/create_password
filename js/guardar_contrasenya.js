@@ -1,8 +1,6 @@
 // Esperamos a que se carge bien todo el HTML.
 document.addEventListener("DOMContentLoaded", function () {
 
-  
-
   // Cogemos la referencia del botón guardar.
   let boton_guardar = document.getElementById("boton_guardar");
 
@@ -45,12 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             }
           })
-
-        }
-        
-
+        }        
       }
     })
-
   })
 });

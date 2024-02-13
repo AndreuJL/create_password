@@ -24,7 +24,7 @@
 
     // Si las variables obtenidas no están vacias...
     if(!empty($nombre_contrasenya) && !empty($salida_contrasenya)) {
-
+      
       // Preparamos la consulta SQL
       $query = "INSERT INTO `contrasenyas` (`id_contrasenya_generada`, `nombre_contrasenya`, `contrasenya_generada`, `id_usuario`) VALUES (NULL, '$nombre_contrasenya', '$salida_contrasenya', '$id_usuario');";
 
@@ -34,24 +34,12 @@
       // Si el resultado está vacio salimos del proceso.
       if(!$result) {
         die("Error de sentencia" . mysqli_error($conector));
-      }
-      
+      }    
     }
 
   // Si falla la conexión a MySQL envia un mensaje de error.
   }else{
     die("Error al conectar con la base de datos");
   }
-
-
-
-
-
-
-
-
-
-
-
 ?>
 

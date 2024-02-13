@@ -235,7 +235,6 @@ body {
           & .copiar__registrado,
           .tus__contrasenyas {
             background: var(--color-azul-oscuro);
-            width: 100px;
             height: 40px;
             border: 2px solid var(--color-lila-casillas);
             border-radius: 10px;
@@ -246,6 +245,14 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
+          }
+
+          & .copiar__registrado {
+            width: 100px;
+          }
+
+          & .tus__contrasenyas {
+            width: 230px;
           }
 
           & a {
@@ -481,7 +488,7 @@ body {
       & .header__contrasenyas {
         display: flex;
         align-items: center;
-        gap: 255px;
+        gap: 180px;
         border-bottom: 1px solid var(--color-blanco-letra);
 
         & p {
@@ -493,15 +500,16 @@ body {
       & .fila__contrasenya {
         display: flex;
         align-items: center;
-        gap: 255px;
+        gap: 220px;
         border-bottom: 1px dashed rgb(180, 180, 180);
 
         & .nombre__contrasenya {
           overflow: hidden;
-          width: 120px;
+          width: 200px;
         }
 
         & .contrasenya__eliminar {
+          width: 100%;
           display: flex;
           justify-content: space-between;
           gap: 15px;

@@ -11,7 +11,7 @@
 </head>
 <body>
   <?php include('componentes/header_no_registrado.php') ?>
-
+  
   <main>
     <div class="container__registro">
       <form action="./php/procesar_registro.php" method="POST" novalidate onsubmit="return validar()">

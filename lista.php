@@ -24,19 +24,19 @@
         <section class="contenedor__lista">
           <h2>Tus contraseñas</h2>
 
-          <article class="subcaja__contrasenyas">
+          <article class="subcaja__contrasenyas" id="subcaja__contrasenyas">
 
             <article class="header__contrasenyas">
               <p>Nombre</p>
               <p>Contraseña</p>
             </article>
 
-            <article class="fila__contrasenya">
+            <!-- <article class="fila__contrasenya">
               <p class="nombre__contrasenya">Google</p>
               <p class="contrasenya__eliminar">555555
                 <img src="svg/eliminar.svg" alt="eliminar">
               </p>             
-            </article>
+            </article> -->
 
           </article>
 
