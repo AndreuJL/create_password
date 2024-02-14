@@ -17,6 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/scroll_header.js"></script>
     <script src="./js/lista.js"></script>
+    <script src="./js/copiar_contrasenyaLista.js"></script>
   </head>
   <body>    
     <?php include('componentes/header_registrado.php'); ?>   
@@ -30,14 +31,6 @@
               <p>Nombre</p>
               <p>Contraseña</p>
             </article>
-
-            <!-- <article class="fila__contrasenya">
-              <p class="nombre__contrasenya">Google</p>
-              <p class="contrasenya__eliminar">555555
-                <img src="svg/eliminar.svg" alt="eliminar">
-              </p>             
-            </article> -->
-
           </article>
 
           <a href="registrado.php">Volver</a>
