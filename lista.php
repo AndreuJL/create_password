@@ -37,5 +37,6 @@
         </section>
       </main>    
     <?php include('componentes/footer_registrado.php'); ?>
+    
   </body>
 </html>

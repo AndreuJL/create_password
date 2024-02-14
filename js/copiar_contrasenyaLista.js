@@ -1,14 +1,7 @@
-// Esperamos a que se carge bien todo el HTML.
-document.addEventListener("DOMContentLoaded", function () {
-  // Cogemos la referencia de la imagen de copiar.
-  let imagen_copiar = document.getElementById("imagen_copiar");
-
-  // Cuando le damos click a la imagen de copiar pasa esto...
-  imagen_copiar.addEventListener("click", function () {
-    // Cogemos el contenido del elemento "contrasenya_lista" del HTML.
-    let copiar_contrasenyaLista = document.getElementById("contrasenya_lista").textContent;
-
-    // Copiamos el contenido de "copiar_contrasenyaLista";
-    navigator.clipboard.writeText(copiar_contrasenyaLista);
-  })
+// Espera a que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtén todos los elementos con la clase 'imagen__copiar'
+    var elementosCopiar = document.querySelectorAll('.imagen__copiar');
+    console.log(elementosCopiar);
+    
 });

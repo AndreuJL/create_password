@@ -1,5 +1,7 @@
 // Definimos una variable para pedir la lista de contraseñas con Ajax a procesar_lista.php.
 let pedir_lista = "rebibir_lista";
+let array_contrasenyas = [];
+let contador = 1;
 
 // Hacemos la petición a procesar_lista.php para obtener la lista de contraseñas mediante el método POST.
 $.ajax({
@@ -12,10 +14,10 @@ $.ajax({
     // Nos devuelve un string con formato JSON y lo convertimos a un objeto JSON.
     let lista_contrasenyas = JSON.parse(response);
 
-    // Recorremos el objeto JSON con un forEach para obtener los nombre y contraseñas de la base de datos.
     lista_contrasenyas.forEach(element => {
       let nombre_contrasenya = element.nombre_contrasenya;
       let contrasenya = element.contrasenya_generada;
+      
 
       // Ahora vamos a crear los elementos de la lista de contraseñas.
       // Primero creamos el artículo.
@@ -36,7 +38,7 @@ $.ajax({
       // Agragamos la contraseña obtenida de la base de datos al párrafo.
       contrasenya__eliminar.textContent = contrasenya;
       // Ponemos una id al párrafo de la contraseña.
-      contrasenya__eliminar.id = "contrasenya_lista";
+      contrasenya__eliminar.id = "contrasenya_lista" + contador;
 
       // Creamos el artículo para los svg.
       let articulo2 = document.createElement("article");
@@ -50,7 +52,7 @@ $.ajax({
       // Agregamos el alt a la imagen.
       imagen_copiar.alt = "copy";
       // Metemos una id la imagen de copiar.
-      imagen_copiar.id = "imagen_copiar";
+      imagen_copiar.classList.add("imagen__copiar");
 
       // Creamos el elemento de imagen para el botón de editar.
       let imagen_editar = document.createElement("img");
@@ -59,7 +61,7 @@ $.ajax({
       // Agregamos el alt a la imagen.
       imagen_editar.alt = "editar";
       // Metemos una id la imagen de editar.
-      imagen_editar.id = "imagen_editar";
+      imagen_editar.id = "imagen_editar" + contador;
 
       // Creamos el elemento de imagen para el botón de eliminar.
       let imagen_eliminar = document.createElement("img");
@@ -67,9 +69,9 @@ $.ajax({
       imagen_eliminar.src = "svg/eliminar.svg";
       // Agregamos el alt a la imagen.
       imagen_eliminar.alt = "eliminar";
-      // Metemos una id la imagen de eliminar.
-      imagen_eliminar.id = "imagen_eliminar";
-
+      // Metemos un id a la imagen de eliminar.
+      imagen_eliminar.id = "imagen_eliminar" + contador;
+      
       // Metemos las imagenes al contenedor de svgs.
       articulo2.appendChild(imagen_copiar);
       articulo2.appendChild(imagen_editar);
@@ -87,6 +89,8 @@ $.ajax({
       
       // Agregamos el artículo al final de "subcaja__contrasenyas".
       subcaja__contrasenyas.appendChild(articulo);
+
+      contador += 1;
     });
   }
 })
