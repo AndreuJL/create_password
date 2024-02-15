@@ -35,12 +35,22 @@ document.addEventListener("DOMContentLoaded", function () {
               nombre_contrasenya: nombre_contrasenya,
               salida_contrasenya: salida_contrasenya
             },
-            success: function () {
-              Swal.fire({
-                icon: "success",
-                title: "Contraseña guardada!!!",
-                text: "La contraseña " + salida_contrasenya + " para " + nombre_contrasenya + " se ha guardado correctamente!",
-              });
+            success: function (response) {
+
+              if (response == "Nombre existente") {
+                Swal.fire({
+                  icon: "error",
+                  title: "Nombre existente!!!",
+                  text: "El nombre " + nombre_contrasenya + " ya existe, por favor elija otro nombre.",
+                });
+              } else {
+                Swal.fire({
+                  icon: "success",
+                  title: "Contraseña guardada!!!",
+                  text: "La contraseña " + salida_contrasenya + " para " + nombre_contrasenya + " se ha guardado correctamente!",
+                });
+              }
+
             }
           })
         }        

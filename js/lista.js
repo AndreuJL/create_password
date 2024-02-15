@@ -1,7 +1,10 @@
+import { copiar_contrasenya } from "./modulos/copiar_contrasenyaLista.js";
+import { eliminar_contrasenya } from "./modulos/eliminar_contrasenyaLista.js";
+import { editar_contrasenya } from "./modulos/editar_nombreContrasenyaLista.js";
+
 // Definimos una variable para pedir la lista de contraseñas con Ajax a procesar_lista.php.
 let pedir_lista = "rebibir_lista";
 let array_contrasenyas = [];
-let contador = 1;
 
 // Hacemos la petición a procesar_lista.php para obtener la lista de contraseñas mediante el método POST.
 $.ajax({
@@ -37,8 +40,6 @@ $.ajax({
       contrasenya__eliminar.classList.add("contrasenya__eliminar");
       // Agragamos la contraseña obtenida de la base de datos al párrafo.
       contrasenya__eliminar.textContent = contrasenya;
-      // Ponemos una id al párrafo de la contraseña.
-      contrasenya__eliminar.id = "contrasenya_lista" + contador;
 
       // Creamos el artículo para los svg.
       let articulo2 = document.createElement("article");
@@ -53,6 +54,7 @@ $.ajax({
       imagen_copiar.alt = "copy";
       // Metemos una id la imagen de copiar.
       imagen_copiar.classList.add("imagen__copiar");
+      imagen_copiar.onclick = function() {copiar_contrasenya(this)};
 
       // Creamos el elemento de imagen para el botón de editar.
       let imagen_editar = document.createElement("img");
@@ -60,8 +62,7 @@ $.ajax({
       imagen_editar.src = "svg/edit.svg";
       // Agregamos el alt a la imagen.
       imagen_editar.alt = "editar";
-      // Metemos una id la imagen de editar.
-      imagen_editar.id = "imagen_editar" + contador;
+      imagen_editar.onclick = function() {editar_contrasenya(this)};
 
       // Creamos el elemento de imagen para el botón de eliminar.
       let imagen_eliminar = document.createElement("img");
@@ -69,8 +70,7 @@ $.ajax({
       imagen_eliminar.src = "svg/eliminar.svg";
       // Agregamos el alt a la imagen.
       imagen_eliminar.alt = "eliminar";
-      // Metemos un id a la imagen de eliminar.
-      imagen_eliminar.id = "imagen_eliminar" + contador;
+      imagen_eliminar.onclick = function() {eliminar_contrasenya(this)};
       
       // Metemos las imagenes al contenedor de svgs.
       articulo2.appendChild(imagen_copiar);
@@ -89,8 +89,6 @@ $.ajax({
       
       // Agregamos el artículo al final de "subcaja__contrasenyas".
       subcaja__contrasenyas.appendChild(articulo);
-
-      contador += 1;
     });
   }
 })

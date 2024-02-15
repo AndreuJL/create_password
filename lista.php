@@ -15,9 +15,9 @@
     <title>Tus contraseñas</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/scroll_header.js"></script>
-    <script src="./js/lista.js"></script>
-    <script src="./js/copiar_contrasenyaLista.js"></script>
+    <script src="./js/lista.js" type="module"></script>
   </head>
   <body>    
     <?php include('componentes/header_registrado.php'); ?>   
