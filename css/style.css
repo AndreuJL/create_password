@@ -481,35 +481,39 @@ body {
     align-items: center;
 
     & .subcaja__contrasenyas {
-      width: 500px;
+      width: 45%;
       display: flex;
       flex-direction: column;
+      font-size: 22px;
 
       & .header__contrasenyas {
         display: flex;
         align-items: center;
-        gap: 180px;
         border-bottom: 1px solid var(--color-blanco-letra);
+        font-size: 20px;
 
-        & p {
-          min-width: 120px;
-          font-size: 18px;
+        & .nombre__contrasenyatitulo {
+          width: 70%;
+        }
+
+        & .subtitulo__contrasenya {
+          width: 30%;
         }
       }
 
       & .fila__contrasenya {
         display: flex;
         align-items: center;
-        gap: 220px;
         border-bottom: 1px dashed rgb(180, 180, 180);
+        font-size: 16px;
 
         & .nombre__contrasenya {
           overflow: hidden;
-          width: 200px;
+          width: 70%;
         }
 
         & .contrasenya__eliminar {
-          width: 100%;
+          width: 30%;
           display: flex;
           justify-content: space-between;
           gap: 15px;

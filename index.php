@@ -19,15 +19,15 @@
 
                 <article class="opciones">
                   <div class="opcion">
-                    <input type="checkbox" name="mayusculas" id="mayusculas">
+                    <input type="checkbox" name="mayusculas" id="mayusculas" checked>
                     <h3>MAYÚSCULAS</h3>
                   </div>
                   <div class="opcion">
-                    <input type="checkbox" name="minusculas" id="minusculas">
+                    <input type="checkbox" name="minusculas" id="minusculas" checked>
                     <h3>Minúsculas</h3>
                   </div>
                   <div class="opcion">
-                    <input type="checkbox" name="numeros" id="numeros">
+                    <input type="checkbox" name="numeros" id="numeros" checked>
                     <h3>Números</h3>
                   </div>
                   <!-- He puesto este check y select escondido con CSS para que javascript me pille que la casilla de simbolos no está seleccionada y para que me pilla que tiene la opcion de 6 carácteres siempre -->

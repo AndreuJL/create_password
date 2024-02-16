@@ -34,19 +34,19 @@
 
                 <article class="opciones">
                   <div class="opcion">
-                    <input type="checkbox" name="mayusculas" id="mayusculas">
+                    <input type="checkbox" name="mayusculas" id="mayusculas" checked>
                     <h3>MAYÚSCULAS</h3>
                   </div>
                   <div class="opcion">
-                    <input type="checkbox" name="minusculas" id="minusculas">
+                    <input type="checkbox" name="minusculas" id="minusculas" checked>
                     <h3>Minúsculas</h3>
                   </div>
                   <div class="opcion">
-                    <input type="checkbox" name="numeros" id="numeros">
+                    <input type="checkbox" name="numeros" id="numeros" checked>
                     <h3>Números</h3>
                   </div>
                   <div class="opcion">
-                    <input type="checkbox" name="simbolos" id="simbolos">
+                    <input type="checkbox" name="simbolos" id="simbolos" checked>
                     <h3>Símbolos</h3>
                   </div>
                   <div class="opcion">

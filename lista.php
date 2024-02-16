@@ -28,8 +28,8 @@
           <article class="subcaja__contrasenyas" id="subcaja__contrasenyas">
 
             <article class="header__contrasenyas">
-              <p>Nombre</p>
-              <p>Contraseña</p>
+              <p class="nombre__contrasenyatitulo">Nombre</p>
+              <p class="subtitulo__contrasenya">Contraseña</p>
             </article>
           </article>
 
