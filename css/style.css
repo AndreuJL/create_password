@@ -276,7 +276,7 @@ body {
         background-repeat: no-repeat;
         background-image: url(../img/desktop/imagen_robot1.webp);
         @media (-webkit-max-device-pixel-ratio: 2) {
-          background-image: url(../assets/imagen_robot1@2x.png);
+          background-image: url(../img/desktop/imagen_robot1@2x.webp);
         }
       }
     }
@@ -322,7 +322,7 @@ body {
           background-repeat: no-repeat;
           background-image: url(../img/desktop/imagen_robot2.webp);
           @media (-webkit-max-device-pixel-ratio: 2) {
-            background-image: url(../assets/imagen_robot2@2x.png);
+            background-image: url(../img/desktop/imagen_robot2@2x.webp);
           }
         }
       }
@@ -337,7 +337,7 @@ body {
           background-repeat: no-repeat;
           background-image: url(../img/desktop/imagen_contrasena.webp);
           @media (-webkit-max-device-pixel-ratio: 2) {
-            background-image: url(../assets/imagen_contrasena@2x.png);
+            background-image: url(../img/desktop/imagen_contrasena@2x.webp);
           }
         }
       }
@@ -360,7 +360,7 @@ body {
           background-repeat: no-repeat;
           background-image: url(../img/desktop/imagen_info_personal.webp);
           @media (-webkit-max-device-pixel-ratio: 2) {
-            background-image: url(../assets/imagen_info_personal@2x.png);
+            background-image: url(../img/desktop/imagen_info_personal@2x.webp);
           }
         }
       }

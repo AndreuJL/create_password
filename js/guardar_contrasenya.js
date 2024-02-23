@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Si se ha dado al botón de generar (que la salida no sea "Por favor elija una opción") cogerá el nombre en una variable.
         if (salida_contrasenya != "Por favor elija una opción") {
           let nombre_contrasenya = result.value;
-
+          // Con ajax mandamos el nombre y la contraseña a guardar_contrasenya.php que se encargará de guardar la contraseña en la base de datos.
           $.ajax({
             url: './php/guardar_contrasenya.php',
             type: 'POST',
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
               salida_contrasenya: salida_contrasenya
             },
             success: function (response) {
-
+              // Si el nombre ya existe saldrá un alert de error.
               if (response == "Nombre existente") {
                 Swal.fire({
                   icon: "error",
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   text: "El nombre " + nombre_contrasenya + " ya existe, por favor elija otro nombre.",
                 });
               } else {
+                // Si se ha guardado correctamente saldrá un alert de éxito.
                 Swal.fire({
                   icon: "success",
                   title: "Contraseña guardada!!!",

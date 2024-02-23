@@ -6,9 +6,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Cuando le damos click al botón de copiar pasa esto...
   boton_copiar.addEventListener("click", function () {
     // Cogemos el contenido del elemento "salida_contrasena" del HTML.
-    let salida_contrasenya = document.getElementById("salida__contrasena").textContent;
+    let salida_contrasenya = document.getElementById("salida__contrasena");
 
-    // Copiamos el contenido de "salida_contrasenya";
-    navigator.clipboard.writeText(salida_contrasenya);
+    // Seleccionamos el contenido del elemento.
+    let range = document.createRange();
+    range.selectNodeContents(salida_contrasenya);
+
+    // Seleccionamos el contenido del elemento.
+    let seleccion = window.getSelection();
+    seleccion.removeAllRanges();
+    seleccion.addRange(range);
+    
+    // Ejecutamos el comando de copiar.
+    document.execCommand("copy");
+    
+    // Limpiamos la selección.
+    seleccion.removeAllRanges();
   })
 });
+

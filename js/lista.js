@@ -3,8 +3,7 @@ import { eliminar_contrasenya } from "./modulos/eliminar_contrasenyaLista.js";
 import { editar_contrasenya } from "./modulos/editar_nombreContrasenyaLista.js";
 
 // Definimos una variable para pedir la lista de contraseñas con Ajax a procesar_lista.php.
-let pedir_lista = "rebibir_lista";
-let array_contrasenyas = [];
+let pedir_lista = "recibir_lista";
 
 // Hacemos la petición a procesar_lista.php para obtener la lista de contraseñas mediante el método POST.
 $.ajax({
