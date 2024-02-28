@@ -1,4 +1,4 @@
-# Plantilla: Arquitectura FrontEnd
+# Plantilla: Arquitectura FrontEnd 
 
 ##### Plantilla Básica para poder empezar casi cualquier proyecto en **FrontEnd**
 >
