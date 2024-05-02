@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  // Si el usuario no está logeado se redirigirá a index.php.
+  if (!isset($_SESSION['logeado'])) {
+    $registro = '<a href= index.php>Volver a la página principal</a>';
+  } else {
+    $registro = '<a href= registrado.php>Volver a la página principal</a>';
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -8,7 +18,7 @@
     <script src="./js/scroll_header.js"></script>
   </head>
   <body>    
-    <?php include('componentes/header_no_registrado.php'); ?>   
+    <?php include('componentes/header.php'); ?>   
       <main>
         <section class="privacidad__cookies">
           <h2>Política de privacidad</h2>
@@ -120,9 +130,9 @@
           <p>Esta Política de Privacidad fue actualizada para adaptarse al Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD) y a la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.</p>
 
           <p>Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 23/01/2024.</p>
-          <a href="index.php">Volver a la página principal</a>
+          <a href="registrado.php">Volver a la página principal</a>
         </section>
       </main>    
-    <?php include('componentes/footer_no_registrado.php'); ?>
+    <?php include('componentes/footer.php'); ?>
   </body>
 </html>

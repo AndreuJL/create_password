@@ -10,7 +10,7 @@
   <script src="./js/validaciones.js"></script>
 </head>
 <body>
-  <?php include('componentes/header_no_registrado.php') ?>
+  <?php include('componentes/header.php') ?>
   
   <main>
     <div class="container__registro">
@@ -43,6 +43,6 @@
     </div>
   </main>
 
-  <?php include('componentes/footer_no_registrado.php') ?>
+  <?php include('componentes/footer.php') ?>
 </body>
 </html>

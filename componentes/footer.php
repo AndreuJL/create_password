@@ -22,8 +22,8 @@
   <section>
     <h4>Legal y contacto</h4>
     <ul>
-      <li><a href="politica_no_registrado.php">Privacidad</a></li>
-      <li><a href="cookies_no_registrado.php">Cookies</a></li>
+      <li><a href="politica.php">Privacidad</a></li>
+      <li><a href="cookies.php">Cookies</a></li>
       <li>oppassword@gmail.com</li>
     </ul>
   </section>

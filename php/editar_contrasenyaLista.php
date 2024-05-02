@@ -24,7 +24,7 @@
 
     if(isset($nombre_contrasenyaEditar, $nuevo_nombre, $id_usuario)) {
 
-      // Buscamos la contraseña que queremos editar y la eliminamos.
+      // Buscamos la contraseña que queremos editar y la editamos.
       $query = "UPDATE `contrasenyas` SET `nombre_contrasenya` = '$nuevo_nombre' WHERE `contrasenyas`.`nombre_contrasenya` = '$nombre_contrasenyaEditar' and `contrasenyas`.`id_usuario` = '$id_usuario'";
       $result = mysqli_query($conector, $query);
       

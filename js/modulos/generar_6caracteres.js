@@ -164,7 +164,7 @@ export function generar_6caracteres() {
     var contrasenya_fin = array_contrasenya_may_simb.toString().replace(/,/g, "");
     contrasenya.textContent = contrasenya_fin;
   };
-      
+  
   // MINÚSCULAS + SÍMBOLOS
   if (!mayusculas.checked && minusculas.checked && !numeros.checked && simbolos.checked) {
     let contrasenya_min = "";
@@ -228,7 +228,7 @@ export function generar_6caracteres() {
     var contrasenya_fin = array_contrasenya_may_min_num.toString().replace(/,/g, "");
     contrasenya.textContent = contrasenya_fin;
   };
-    
+  
   // MINÚSCULAS + NÚMEROS + SÍMBOLOS
   if (!mayusculas.checked && minusculas.checked && numeros.checked && simbolos.checked) {
     let contrasenya_mim = "";

@@ -20,7 +20,7 @@
     <script src="./js/lista.js" type="module"></script>
   </head>
   <body>    
-    <?php include('componentes/header_registrado.php'); ?>   
+    <?php include('componentes/header.php'); ?>   
       <main>
         <section class="contenedor__lista">
           <h2>Tus contraseñas</h2>
@@ -36,7 +36,7 @@
           <a href="registrado.php">Volver</a>
         </section>
       </main>    
-    <?php include('componentes/footer_registrado.php'); ?>
+    <?php include('componentes/footer.php'); ?>
     
   </body>
 </html>

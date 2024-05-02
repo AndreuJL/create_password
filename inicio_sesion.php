@@ -10,11 +10,11 @@
 </head>
 <body>
 
-  <?php include('componentes/header_no_registrado.php') ?>
+  <?php include('componentes/header.php') ?>
 
   <main>
     <div class="container__registro">
-      <form action="./php/procesar_iniciar_sesion.php" method="POST" novalidate onsubmit="return validar()">
+      <form action="./php/procesar_iniciar_sesion.php" method="POST" novalidate>
         <h2>INICIAR SESIÓN</h2>
         <label for="nombre_usuarioSesion">Nombre de Usuario*</label>
         <input type="text" name="nombre_usuarioSesion" id="nombre_usuarioSesion" />
@@ -30,7 +30,7 @@
     </div>
   </main>
   
-  <?php include('componentes/footer_no_registrado.php') ?>
+  <?php include('componentes/footer.php') ?>
 
 </body>
 </html>

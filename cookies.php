@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  // Si el usuario no está logeado se redirigirá a index.php.
+  if (!isset($_SESSION['logeado'])) {
+    $registro = '<a href= index.php>Volver a la página principal</a>';
+  } else {
+  // Si el usuario está logeado se redirigirá a registrado.php.
+    $registro = '<a href= registrado.php>Volver a la página principal</a>';
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -7,8 +18,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="./js/scroll_header.js"></script>
   </head>
-  <body>    
-    <?php include('componentes/header_no_registrado.php'); ?>   
+  <body>
+    <?php include('componentes/header.php'); ?>   
       <main>
         <section class="privacidad__cookies">
           <h2>Cookies</h2>
@@ -19,9 +30,9 @@
           <h4>Deshabilitar, rechazar y eliminar cookies</h4>
           <p>El Usuario puede deshabilitar, rechazar y eliminar las cookies —total o parcialmente— instaladas en su dispositivo mediante la configuración de su navegador (entre los que se encuentran, por ejemplo, Chrome, Firefox, Safari, Explorer). En este sentido, los procedimientos para rechazar y eliminar las cookies pueden diferir de un navegador de Internet a otro. En consecuencia, el Usuario debe acudir a las instrucciones facilitadas por el propio navegador de Internet que esté utilizando. En el supuesto de que rechace el uso de cookies —total o parcialmente— podrá seguir usando el Sitio Web, si bien podrá tener limitada la utilización de algunas de las prestaciones del mismo.</p>
           <p>Este documento de Política de Cookies ha sido creado mediante el generador de plantilla de política de cookies web gratis online el día 23/01/2024.</p>
-          <a href="index.php">Volver a la página principal</a>
+          <?php echo $registro ?>
         </section>
       </main>    
-    <?php include('componentes/footer_no_registrado.php'); ?>
+    <?php include('componentes/footer.php'); ?>
   </body>
 </html>

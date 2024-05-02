@@ -10,7 +10,7 @@
     <script src="./js/copiar_contrasenya.js"></script>
   </head>
   <body>
-    <?php include('componentes/header_no_registrado.php'); ?>   
+    <?php include('componentes/header.php'); ?>
       <main>
             <section class="generador">
               <section class="izquierda">
@@ -74,6 +74,6 @@
               <article class="imagen3"></article>
             </section>
       </main>    
-    <?php include('componentes/footer_no_registrado.php'); ?>    
+    <?php include('componentes/footer.php'); ?>    
   </body>
 </html>
