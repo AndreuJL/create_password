@@ -1,5 +1,5 @@
 // Importamos las 3 funciones.
-import { generar_6caracteres } from "./modulos/generar_6caracteres.js";
+import { generar_caracteres } from "./modulos/generar_6caracteres.js";
 import { generar_8caracteres } from "./modulos/generar_8caracteres.js";
 import { generar_10caracteres } from "./modulos/generar_10caracteres.js";
 
@@ -15,15 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Según el valor que tendrá el select llamamos a una función u otra.
     switch (valor_select) {
       case "6caracteres":
-        generar_6caracteres();
+        generar_caracteres(6,3,2,2,2,2,1);
         break;
 
       case "8caracteres":
-        generar_8caracteres();
+        generar_caracteres(8,4,3,2,2,2,2);
         break;
 
       case "10caracteres":
-        generar_10caracteres();
+        generar_caracteres(10,5,4,3,2,3,2);
         break;
 
       default:

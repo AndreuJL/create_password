@@ -65,3 +65,50 @@ Este archivo contiene un mapa del sitio web, que ayuda a los motores de búsqued
 #### assets
 
 Es la carpeta donde se guardan los archivos originales del proyecto o archivos complementarios al proyecto.
+
+#### assets
+
+const opciones = {
+    seisCaracteres: [{
+        unElemento: 6,
+        dosElementos: 3,
+        tresElementos: 2,
+        mayMinNumSimb: [{
+        mayMin: 2,
+        numSimb: 1,
+        }]
+    }],
+    ochoCaracteres: [{
+        unElemento: 8,
+        dosElementos: 4,
+        tresElementos: [{
+            dosPrimeros: 3,
+            ultimo: 2,
+        }],
+        MayMinNumSimb: 2
+    }],
+    diezCaracteres: [{
+        unElemento: 10,
+        dosElementos: 5,
+        mayMinNum: [{
+            may: 4,
+            minNum: 3,
+        }],
+        minNumSimb: [{
+            min: 4,
+            numSimb: 3,
+        }],
+        mayNumSimb: [{
+            may: 4,
+            numSimb: 3,
+        }],
+        mayMinSimb: [{
+            mayMin: 4,
+            simb: 2,
+        }],
+        mayMinNumSimb: [{
+            mayMin: 3,
+            numSimb: 2,
+        }]
+    }]
+};
