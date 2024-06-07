@@ -1,7 +1,5 @@
 // Importamos las 3 funciones.
-import { generar_caracteres } from "./modulos/generar_6caracteres.js";
-import { generar_8caracteres } from "./modulos/generar_8caracteres.js";
-import { generar_10caracteres } from "./modulos/generar_10caracteres.js";
+import { generar_caracteres } from "./modulos/generar_caracteres.js";
 
 // Esperamos que se carge toda la página HTML.
 document.addEventListener("DOMContentLoaded", function () {
@@ -12,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cogemos el valor del select mediante su id
     let valor_select = longitud.value;
 
-    // Según el valor que tendrá el select llamamos a una función u otra.
+    // Según el valor que tendrá el select ponemos los parámetros que toque a cada opción.
     switch (valor_select) {
       case "6caracteres":
         generar_caracteres(6,3,2,2,2,2,1);

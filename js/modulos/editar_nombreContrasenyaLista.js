@@ -9,7 +9,7 @@ export function editar_contrasenya(element) {
   let nombre_contrasenyaEditar = elemento_texto.textContent;
   // Saldrá un alert que nos pedirá el nombre que le queremos poner a la contraseña.
   Swal.fire({
-    title: "Inserte el nombre que le quiera poner a la contraseña (Nombre actual: " + nombre_contrasenyaEditar + ")",
+    title: "Inserte el nombre que le quiera poner a la contraseña </br> (Nombre actual: " + nombre_contrasenyaEditar + ")",
     input: "text",
     inputAttributes: {
       autocapitalize: "off",

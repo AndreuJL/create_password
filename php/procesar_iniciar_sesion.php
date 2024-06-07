@@ -56,7 +56,6 @@
 
 ?>
 
-
 <!-- ------------- ALERTAS ------------- -->
 <!DOCTYPE html>
 <html lang="es">
@@ -116,7 +115,7 @@
 </script>
 
 
- <!-- ALERTA SI NO EXISTE EL USUARIO -->
+  <!-- ALERTA SI NO EXISTE EL USUARIO -->
 <script type="text/javascript">
   let comprobante_usuario = "<?php echo $comprobante_usuario ?>";
 
