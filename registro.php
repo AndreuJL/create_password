@@ -11,7 +11,6 @@
 </head>
 <body>
   <?php include('componentes/header.php') ?>
-  
   <main>
     <div class="container__registro">
       <form action="./php/procesar_registro.php" method="POST" novalidate onsubmit="return validar()">
@@ -38,11 +37,9 @@
           <a href="index.php">Volver</a>
         </div>
       </form>
-
       <picture></picture>
     </div>
   </main>
-
   <?php include('componentes/footer.php') ?>
 </body>
 </html>

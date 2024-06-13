@@ -37,6 +37,5 @@
         </section>
       </main>    
     <?php include('componentes/footer.php'); ?>
-    
   </body>
 </html>

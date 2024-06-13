@@ -66,7 +66,7 @@ Este archivo contiene un mapa del sitio web, que ayuda a los motores de búsqued
 
 Es la carpeta donde se guardan los archivos originales del proyecto o archivos complementarios al proyecto.
 
-#### assets
+#### Opciones número de carácteres
 
 const opciones = {
     seisCaracteres: [{

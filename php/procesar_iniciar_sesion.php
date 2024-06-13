@@ -53,7 +53,6 @@
 
     $stmt->close();
   }
-
 ?>
 
 <!-- ------------- ALERTAS ------------- -->
@@ -72,7 +71,6 @@
     let error_conexionBD = "<?php echo $error_conexionBD ?>";
 
     if (error_conexionBD == "error_BD") {
-    
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -88,7 +86,6 @@
         window.location.href = "../inicio_sesion.php";
       }, 20000);
     }
-
   </script>
 
   <!-- ALERTA SI LA CONTRASEÑA ES INCORRECTA -->
@@ -114,13 +111,11 @@
   }
 </script>
 
-
   <!-- ALERTA SI NO EXISTE EL USUARIO -->
 <script type="text/javascript">
   let comprobante_usuario = "<?php echo $comprobante_usuario ?>";
 
   if (comprobante_usuario == "usuario_incorrecto") {
-    
     Swal.fire({
       icon: "error",
       title: "Oops...",
@@ -136,12 +131,7 @@
       window.location.href = "../inicio_sesion.php";
     }, 20000);
   }
-
 </script>
-
 </body>
 </html>
-
-
 <?php exit; ?>
-

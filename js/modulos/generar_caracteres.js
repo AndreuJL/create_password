@@ -13,13 +13,11 @@ function desordenar(array) {
 export function generar_caracteres(unElemento, dosElementos, tresElementos1, tresElementos2, tresElementos3, cuatroElementos1, cuatroElementos2) {
   // Se referencia a todos los elementos necesarios del HTML
   let contrasenya = document.getElementById("salida__contrasena");
-
   let mayusculas = document.getElementById("mayusculas");
   let minusculas = document.getElementById("minusculas");
   let numeros = document.getElementById("numeros");
   let simbolos = document.getElementById("simbolos");
 
-  // Para los símbolos simplemente he hecho un Array con los que quiero poner (no son todos ya que algunos serían un poco complicados para los usuarios). Se usará más adelante.
   let array_contrasenya_simb = ["!", "¡", "¿", "?", "$", "%", "&", "=", "+", "-", "*", "/"];  
 
   do {

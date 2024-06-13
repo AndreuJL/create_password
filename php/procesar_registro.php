@@ -49,8 +49,6 @@
   }
 ?>
 
-
-
 <!-- ------------- ALERTAS ------------- -->
 <!DOCTYPE html>
 <html lang="es">
@@ -154,6 +152,5 @@
       }, 20000);
     }
   </script>
-
 </body>
 </html>
