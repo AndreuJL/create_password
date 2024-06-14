@@ -4,7 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>oppasword</title>
+    <!-- SEO = Básico -->
+    <meta name="Genera y guarda tus propias contraseñas" content="" />
+    <meta name="seguridad contraseña seguro" content="" />
+    <!-- Etiquetas Open Graph y Twitter Card, para crear el SEO de Redes Sociales -->
+    <meta property="og:title" content="oppasword" />
+    <meta property="og:description" content="Genera y guarda tus propias contraseñas" />
+    <meta
+      property="og:image"
+      content="./img/desktop/imagen_contrasena.webp"
+    />
+    <meta property="og:url" content="http://oppassword.andreujuliaedib.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="oppassword" />
+    <meta name="twitter:description" content="Genera y guarda tus propias contraseñas" />
+    <meta
+      name="twitter:image"
+      content="./img/desktop/imagen_contrasena.webp"
+    />
+     <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
+     <link rel="manifest" href="site.webmanifest" />
+    <!-- icono de acceso para IOS -->
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
     <link rel="stylesheet" href="css/style.css" />
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Se cambia el tema de algunos navegadores -->
+    <meta name="theme-color" content="#fafafa" />
     <script src="./js/scroll_header.js"></script>
     <script src="./js/generar_contrasenya.js" type="module"></script>
     <script src="./js/copiar_contrasenya.js"></script>
