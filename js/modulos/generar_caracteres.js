@@ -31,7 +31,7 @@ export function generar_caracteres(unElemento, dosElementos, tresElementos1, tre
     };
 
     // MAYÚSCULAS
-    // Si solo están marcadas las mayúsculas con un for de 6 vueltas crea un número aleatorio de entre 65 y 90 que son las mayúsculas en la tabla Ascii, los paso a mayúsculas de la tabla Ascii y voy anexando carácteres al string "contrasenya_may",
+    // Si solo están marcadas las mayúsculas con un for un número aleatorio de entre 65 y 90 que son las mayúsculas en la tabla Ascii, transformamos las números en dichas mayúsculas y voy anexando carácteres al string "contrasenya_may",
     if (mayusculas.checked && !minusculas.checked && !numeros.checked  && !simbolos.checked) {
       let contrasenya_may = "";
       for (let i = 0; i < unElemento; i++) {
@@ -69,7 +69,7 @@ export function generar_caracteres(unElemento, dosElementos, tresElementos1, tre
     };
 
     // SÍMBOLOS
-    // Con un bucle de 6 vueltas busca un número aleatorio de entre 0 y 11 ya que son los índices de la array de símbolos, guardamos el valor del indice aleatorio en una variable, los vamos concatenando y los mostramos juntos por pantalla.
+    // Con un bucle busca un número aleatorio de entre 0 y 11 ya que son los índices de la array de símbolos, guardamos el valor del indice aleatorio en una variable, los vamos concatenando y los mostramos juntos por pantalla.
     if (!numeros.checked && !minusculas.checked && !mayusculas.checked && simbolos.checked) {
       let contrasenya_simb = "";     
       for (let i = 0; i < unElemento; i++) {
@@ -81,7 +81,7 @@ export function generar_caracteres(unElemento, dosElementos, tresElementos1, tre
     };
 
     // MAYÚSCULAS + MINÚSCULAS
-    // Aquí es lo mismo pero con mayúsculas y minúsculas, el bucle for solo da 3 vueltas porque he decidido que tiene que haber 3 mayúsculas y 3 minúsculas. Luego la paso a array para desordenarla y la vuelvo a pasar a String para tener la contrasenya final.
+    // Aquí es lo mismo pero con mayúsculas y minúsculas, el bucle for solo hace la mitad de vueltas que carácteres tiene la contraseña, ya que he decidido que tiene que haber la mitad de mayúsculas que de minúsculas. Luego la paso a array para desordenarla y la vuelvo a pasar a String para tener la contrasenya final.
     if (mayusculas.checked && minusculas.checked && !numeros.checked && !simbolos.checked) {
       let contrasenya_may = "";
       let contrasenya_mim = "";
@@ -203,7 +203,7 @@ export function generar_caracteres(unElemento, dosElementos, tresElementos1, tre
     };
 
     // MAYÚSCULAS + MINÚSCULAS + NÚMEROS
-    // Igual que en los anteriores pero con mayúsculas minúsculas y números, he decidido que la contraseña tendrá que tener 2 elementos de cada, así que el bucle solo da 2 vueltas.
+    // Igual que en los anteriores pero con mayúsculas minúsculas y números, se ha decidido que habrá igual número siempre de mayúsculas que de minúsculas simpre.
     if (mayusculas.checked && minusculas.checked && numeros.checked && !simbolos.checked) {
       let contrasenya_may = "";
       let contrasenya_min = "";
@@ -305,7 +305,7 @@ export function generar_caracteres(unElemento, dosElementos, tresElementos1, tre
     };
 
     // MAYÚSCULAS + MINÚSCULAS + NÚMEROS + SÍMBOLOS
-    // En este apartado he decidido que tiene que haber 2 mayúsculas, 2 minúsculas, 1 número y 1 símbolo.
+    // En este apartado he decidido que tiene que haber igual de mayúsculas que de minúsculas e igual de números que de símbolos siempre.
     if (mayusculas.checked && minusculas.checked && numeros.checked && simbolos.checked) {
       let contrasenya_may = "";
       let contrasenya_min = "";

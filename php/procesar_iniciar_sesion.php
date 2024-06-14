@@ -2,14 +2,7 @@
   // Iniciamos sesión.
   session_start();
 
-  // Definimos las variables para la base de datos.
-  $host = "localhost";
-  $user = "edib";
-  $password = "edib";
-  $bbdd = "contrasenyas";
-
-  // Conectamos con la base de datos
-  $conector = mysqli_connect($host, $user, $password, $bbdd);
+  require_once 'config.php';
 
   //Otra manera de manipular el error de la Base de datos.
   if (mysqli_connect_errno()) {

@@ -7,16 +7,33 @@ export function eliminar_contrasenya(element) {
   let elemento_texto = padre3.querySelector("p:nth-of-type(2)");
   // Extraemos el texto del elemento (que será el texto de la contraseña).
   let contrasenya_eliminar = elemento_texto.textContent;
-  // Con ajax mandamos la contraseña a eliminar_contrasenyaLista.php que se encargará de eliminar la contraseña en la base de datos.
-  $.ajax({
-  url: './php/eliminar_contrasenyaLista.php',
-  type: 'POST',
-  data: {
-    contrasenya_eliminar: contrasenya_eliminar
-  },
-    success: function () {
-    // Si se ha eliminado correctamente en la base de datos se eliminará la contraseña del HTML.
-    padre3.remove();
+
+  Swal.fire({
+    title: "¿Estás seguro?",
+    text: "No podrás volver atrás!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, eliminalo!"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      $.ajax({
+        url: './php/eliminar_contrasenyaLista.php',
+        type: 'POST',
+        data: {
+          contrasenya_eliminar: contrasenya_eliminar
+        },
+        success: function () {
+        // Si se ha eliminado correctamente en la base de datos se eliminará la contraseña del HTML.
+        padre3.remove();
+        }
+      })
+      Swal.fire({
+        title: "Eliminado!",
+        text: "Su contraseña ha sido eliminada.",
+        icon: "success"
+      });
     }
-  })
+  });
 }

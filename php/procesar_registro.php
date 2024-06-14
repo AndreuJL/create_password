@@ -6,14 +6,7 @@
     $correo = $_SESSION["correo"] = $_POST["correo"];
   }
 
-  // Definimos las variables para la base de datos.
-  $host = "localhost";
-  $user = "edib";
-  $password = "edib";
-  $bbdd = "contrasenyas";
-
-  // Conectamos con la base de datos
-  $conector = mysqli_connect($host, $user, $password, $bbdd);
+  require_once 'config.php';
   $error_conexionBD = "";
   $registo_exitoso = "";
   $registro_fallido = "";
